@@ -1,0 +1,14 @@
+<h2>storing the data in the server</h2>
+<p id="demo"></p>
+<script>
+//Storing data:
+var myObj,myJSON,text,obj;
+myObj = { "name":"John", "age":31, "city":"New York" };
+myJSON = JSON.stringify(myObj);
+localStorage.setItem("test5.html", myJSON);
+
+//Retrieving data:
+text = localStorage.getItem("test5.html");
+obj = JSON.parse(text);
+document.getElementById("demo").innerHTML = obj.name;
+</script>
